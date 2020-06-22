@@ -7,8 +7,9 @@
     "start": "node ./webserver/server.js",
     "dev": "npm run build-client && nodemon ./webserver/server.js",
     "debug": "./node_modules/.bin/concurrently 'npm run dev-server' 'npm run dev-client'",
-    "dev-server": "PORT=4001 nodemon webserver/server.js",
     "dev-client": "PORT=4000 npm start --prefix webclient",
+    "dev-server": "PORT=5000 nodemon webserver/server.js",
+    "postinstall": "npm run install-client && npm run build-client",
     "install-client": "npm install --prefix webclient",
     "build-client": "npm run build --prefix webclient"
   },
