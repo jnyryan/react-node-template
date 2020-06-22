@@ -1,0 +1,41 @@
+{
+  "name": "react-node-template",
+  "version": "1.0.0",
+  "description": "template to build a ReactJS app with a node express backend",
+  "main": "server/server.js",
+  "scripts": {
+    "start": "node ./webserver/server.js",
+    "dev": "npm run build-client && nodemon ./webserver/server.js",
+    "debug": "./node_modules/.bin/concurrently 'npm run dev-server' 'npm run dev-client'",
+    "dev-server": "PORT=4001 nodemon webserver/server.js",
+    "dev-client": "PORT=4000 npm start --prefix webclient",
+    "install-client": "npm install --prefix webclient",
+    "build-client": "npm run build --prefix webclient"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jnyryan/react-node-template.git"
+  },
+  "keywords": [
+    "react",
+    "node",
+    "express"
+  ],
+  "author": "John Ryan (jnyryan)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jnyryan/react-node-template/issues"
+  },
+  "homepage": "https://github.com/jnyryan/react-node-template#readme",
+  "engines": {
+    "node": "14.3.0",
+    "npm": "6.14.5"
+  },
+  "dependencies": {
+    "concurrently": "^5.2.0",
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  }
+}
