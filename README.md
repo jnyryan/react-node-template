@@ -1,6 +1,8 @@
 # React-Node-Template
 
+Set up ReactJS to run via node express and proxy API calls to the express backend
 
+This also allows developer mode to run with instant refresh for both react and node.
 
 ## Setup
 
